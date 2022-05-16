@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
+#root, html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+} 
+
+.App{
+    background: url(./Images/Image-1.jpg);
+    background-size: cover;
+    background-position: center ;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.card{
+    background: rgba(255,255,255,0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 3px 3px 10px 2px rgb(119, 119, 119);
+    height: 12vh;
+    width: 500px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem ;
+    border-radius: 1rem ;
+    text-align: center;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3{
+    margin-top: -15px ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button{
+    background-color: rgb(141, 190, 190);
+    border: none;
+    outline: none;
+    padding : .7rem 1rem ;
+    border-radius: 5px ;
+    margin-top: 1rem ;
+    position: absolute;
+    bottom: 20px ;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+@media (max-width : 678px){
+    .card{
+        width: 400px ;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width : 550px ){
+    .card{
+        width: 350px ;
+    }
 }
